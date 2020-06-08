@@ -1,0 +1,133 @@
+/* Reset styles  */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #e3ffff;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Patua One', cursive;
+    text-align: center;
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+
+.noLocalDataMessage {
+    display: none;
+    flex: 0 1 70%;
+    text-align: center;
+}
+
+.flex-main-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+
+.form-result-container {
+    flex: 0 1 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+form > * {
+    display: block;
+    width: 100%;
+}
+
+input[type=number], button {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -moz-appearance: textfield;
+    margin-bottom: 2rem;
+  }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+
+#calculate-btn {
+	box-shadow:inset 0px 1px 0px 0px #e3ffff;
+	background:linear-gradient(to bottom, #e3ffff 5%, #6ecaca 100%);
+	background-color:#e3ffff;
+	border-radius:6px;
+	border:1px solid #5bc2c2;
+    cursor:pointer;
+    color: #086363;
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+    text-decoration:none;
+    margin-top: 2rem;
+}
+
+#calculate-btn:hover {
+	background:linear-gradient(to bottom, #94dbdb 5%, #53dada 100%);
+	background-color:#e3ffff;
+}
+
+#calculate-btn:active {
+	position:relative;
+	top:1px;
+}
+
+.ct-chart {
+    flex: 0 1 70%;
+}
+
+.bmi-results-table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.bmi-results-table td, .bmi-results-table th {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+.bmi-results-table th {
+    background-color: #53dada;
+    color: white;
+  }
+
+.delete-button {
+  display: none;
+}
+
+
+/* Configuration of linechart */
+  /* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+  .ct-series-a .ct-point {
+    /* Colour of your points */
+    stroke: #827a4f;;
+    /* Size of your points */
+    stroke-width: 10px;
+    /* Make your points appear as squares */
+    stroke-linecap: round;
+  }
+
+  .ct-series-a .ct-line {
+    /* Colour of your points */
+    stroke: #e1bd52;;
+    /* Size of your points */
+    stroke-width: 5px;
+    /* Make your points appear as squares */
+    stroke-linecap: square;
+  }
