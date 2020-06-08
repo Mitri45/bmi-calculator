@@ -45,7 +45,7 @@ function populateTable(data) {
     let dateText = document.createTextNode(moment(key).format("D MMM YYYY"));
     dateCell.appendChild(dateText);
     let bmiCell = row.insertCell();
-    let bmiText = document.createTextNode(Math.round(value));
+    let bmiText = document.createTextNode(value.toFixed(1));
     bmiCell.appendChild(bmiText);
       }
     }
@@ -64,19 +64,17 @@ function drawChart() {
             // Get table element and populate it with data from localstorage 
             populateTable(localStorageObj);
             deleteButton.style.display = "block";
+            const legend = document.querySelector(".legend");
+            legend.style.display = "block";
             // Get data from localstorage to draw the chart
             let dateArray = [];
             let bmiArray = [];   
             Object.keys(localStorageObj).forEach(function (key) {
                 const dateFromObj = moment(key).format("D MMM");
                 dateArray.push(dateFromObj);
-                bmiArray.push(Math.round(localStorageObj[key]));
+                bmiArray.push((localStorageObj[key]).toFixed(1));
             })
-            // for (const property in localStorageObj) {
-            //     const dateFromObj = moment(property).format("D MMM");
-            //     dateArray.push(dateFromObj);
-            //     bmiArray.push(Math.round(localStorageObj[property]));
-            // }
+           
 // Draw a chart with given data and options 
             var data = {
                 labels: dateArray,
@@ -137,10 +135,9 @@ function saveToLocalStorage(date, bmi) {
         showMessage.innerText = "Sorry, you localstorage have no available space or disabled";
         showMessage.style.display = "inline";
     }}
-//-- 3. End -- 
 
 
-// -- 4. Begin -- Add validate to inputs  
+// Add validate to inputs  
 function validate(height, weight) {
     if (height.validity.valid && weight.validity.valid) {
         return true

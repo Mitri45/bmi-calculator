@@ -34,7 +34,7 @@
                     <input type="number" id="userWeight" name="weight" min="30" max="150" required>
                     <button type="submit" id="calculate-btn" name="button">
                         Calculate BMI
-                    </button>
+                    </button>`
                 </form>
                 <div class="bmi-results">
                     <table class="bmi-results-table">
@@ -55,7 +55,11 @@
                 calculation graph with your results will be shown here.</p>
             <div class="ct-chart ct-golden-section">
             </div>
+
         </div>
+        <p class="legend">BMI results: </br> 
+            Less than 18.5 = underweight, between 18.5 - 24.9 = healthy weight, between 25 - 29.9 = overweight,  over 30 = obese
+        </p>
     </main>
 </body>
 <script src="./calculate-bmi.js" async defer"></script>

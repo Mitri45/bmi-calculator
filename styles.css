@@ -130,7 +130,10 @@ input::-webkit-inner-spin-button {
 	top:1px;
 }
 
-
+.legend {
+  display: none;
+  text-align: end;
+}
 
 
 /* Configuration of linechart */
