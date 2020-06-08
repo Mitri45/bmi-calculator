@@ -1,4 +1,4 @@
-# bmi-calculator
+## BMI Calculator
 Skillsme Cataloge Practise - website calculating BMI
 Catalog Description
 
@@ -10,3 +10,5 @@ Goals of practise:
 
 How-to use
 Open index.html in your browser and enter your height and weight for calculation. 
+
+Library for chart - CHertis.js (http://gionkunz.github.io/chartist-js/index.html)
