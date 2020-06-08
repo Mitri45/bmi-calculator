@@ -167,6 +167,8 @@ function calculateBMI() {
 function deleteBMI() {
     localStorage.removeItem('bmi-date');
     deleteButton.style.display = "none";
+    const legend = document.querySelector(".legend");
+    legend.style.display = "block";
+    legend.style.display = "none";
     drawChart();
- 
 }
